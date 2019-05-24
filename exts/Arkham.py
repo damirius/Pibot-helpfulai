@@ -82,7 +82,7 @@ class Arkham(commands.Cog):
             m_response += "I see: \"{0}\", but I don't understand\n".format(m_decklist)
         else:
             m_response += self.deck_parse(re_decklist_id.group(2))
-        await self.bot.say(m_response[:2000])
+        await ctx.send(m_response[:2000])
 
     @commands.command(aliases=['arkham', 'arkhamhorror', 'ahe', 'ahb', 'ah1', 'ah2', 'ah3', 'ah4', 'ah5', 'aha'],
                       pass_context=True)
@@ -170,7 +170,7 @@ class Arkham(commands.Cog):
                     # else just post a link
                     m_response = "'{}' matching cards found:\n".format(len(m_cards))
                     m_response += "https://arkhamdb.com/find?q=" + m_query.replace(" ", "+")
-        await self.bot.say(m_response[:2000])
+        await ctx.send(m_response[:2000])
 
 
 def setup(bot):
