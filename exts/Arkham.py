@@ -102,6 +102,7 @@ class Arkham(commands.Cog):
 
         # Auto-link some images instead of other users' names
         query_redirects = {
+            "bois": "http://69.164.193.14/arkhambois.png"
         }
         m_response = ""
         if m_query in query_redirects.keys():
